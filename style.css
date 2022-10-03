@@ -1,18 +1,40 @@
  * {
         margin: 0px;
         padding: 0px;
+        
+       
     }
+    .stickheader {
+    
+        padding: 30px 50px;
+        background: black;
+        color: #f1f1f1;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        
+      }
+      #head:hover{
+        color: black;
+        background-color: greenyellow;
 
+      }
+      
+      
     body {
+        background-color: black;
+        color: white;
         font-family: arial;
     }
+    
 
-    .header {
-        margin-left: 750px;
-    }
+    
 
     .subtitle {
-        margin-left: 600px;
+        padding: 100px;
+        margin: 35px;
+        text-align: center;
+        font-family:cursive;
     }
 
     
@@ -34,9 +56,12 @@
     .card {
         width: 20%;
         display: inline-block;
-        box-shadow: 2px 2px 20px black;
+        box-shadow: 2px 2px 10px silver;
         border-radius: 5px;
         margin: 2%;
+    }
+    .card:hover{
+       box-shadow:  2px 2px 20px grey;
     }
 
     .image img {
@@ -69,22 +94,27 @@
     }
 
     button {
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        color:white;
         margin-top: 40px;
         margin-bottom: 10px;
-        background-color: white;
+        background-color: gray;
         border: 1px solid black;
         border-radius: 5px;
         padding: 10px;
+        opacity: 0.7;
     }
 
     button:hover {
-        background-color: black;
-        color: white;
-        transition: .5s;
+        background-color: greenyellow;
+        color: black;
+        transition: .3s;
         cursor: pointer;
+        opacity: 1;
     }
 
     .footer-heart {
-        align-content: center;
-        margin-left: 750px;
+        font-size: larger;
+       text-align: center;
+       margin-top: 200px;
     }
