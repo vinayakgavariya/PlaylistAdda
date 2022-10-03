@@ -29,14 +29,31 @@
      font-family: arial;
  }
 
+ .logo {
+     text-align: center;
+ }
 
-
+ .logo img {
+     margin: 3rem 0;
+     max-width: 200px;
+ }
 
  .subtitle {
      padding: 100px;
      margin: 35px;
      text-align: center;
      font-family: cursive;
+ }
+
+
+
+ #search_bar {
+     float: right;
+     display: block;
+     text-align: left;
+     width: 30%;
+     margin-right: 1%;
+     padding: 10px;
  }
 
  .main {
