@@ -1,5 +1,5 @@
 # PlaylistAdda
-A fun project in through which anyone can share their music playlists.
+A fun project for friends through which everyone can share their music playlists.
 #  Hacktoberfest-2022🔥
 ![image](https://user-images.githubusercontent.com/70385488/192114009-0830321a-d227-4a4d-8411-6c03b54d7ce6.png)
 
