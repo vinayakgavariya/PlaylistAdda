@@ -1,0 +1,184 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img,
+picture {
+    max-width: 100%;
+    display: block;
+    background-repeat: no-repeat;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* FORM SETUP */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* REMOVE ANIMATION FOR THOSE WHO HAVE IT TURNED OFF */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+
+body {
+    background-color: #010A09;
+    font-family: 'DM Sans', sans-serif;  
+}
+
+.container {
+    display: flex;
+}
+
+img {
+    object-fit: cover;
+    width: 100%;
+    max-height: 100vh;
+}
+
+.img-container {
+    flex: 2;
+}
+
+label, h2 {
+    color: #fff;
+}
+
+label {
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 8px;
+    display: block;
+}
+
+h2 {
+    margin-bottom: 48px;
+}
+
+input {
+    height: 48px;
+    border-radius: 6px;
+    outline: none;
+    border: none;
+    padding-left: 16px;
+    width: 100%;
+}
+
+.form-container {
+    flex: 1;
+    padding-inline: 48px;
+    margin-top: 48px;
+}
+
+.email-field {
+    margin-bottom: 16px;
+}
+
+.password-input {
+    position: relative;
+}
+
+.eye-icon {
+    position: absolute;
+    color: #4D4D4D;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.checkbox{
+    margin-top: 6px;
+    -webkit-appearance: none;
+    appearance: none;
+    width: 40px;
+    height: 20px;
+    background-color: #ddd;
+    border-radius: 25px;
+    transition: background .6s;
+    cursor: pointer;
+    position: relative;
+  }
+ 
+  .checkbox::after{
+    content: '';
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background-color: #fff;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    transition: left .3s;
+  }
+
+  .checkbox:checked{
+    background: #007AFF;
+  }
+ 
+  .checkbox:checked::after{
+    left: 70%;
+  }
+
+  .account-recovery, .remember {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .account-recovery {
+    margin-top: 20px;
+  }
+
+  .remember p {
+    color: #fff;
+    margin-left: 8px;
+  }
+
+.account-recovery a {
+    color: #02B160;
+}
+
+.account-recovery a:hover {
+    text-decoration: underline;
+}
+
+
+button {
+    width: 100%;
+    height: 48px;
+    margin-top: 32px;
+    color: #fff;
+    background-color: #02B160;
+    text-align: center;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: all 300ms ease-in;
+}
+
+button:hover {
+    background-color: #02b15fbe;
+}
+
+@media (max-width: 768px) {
+    .img-container {
+        display: none;
+    }
+}
