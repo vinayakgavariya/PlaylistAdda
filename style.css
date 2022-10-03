@@ -4,6 +4,11 @@
         
        
     }
+    #myHeader:hover{
+background-color: rgb(64, 62, 60);
+cursor: pointer;
+text-decoration: underline purple 4px;
+    }
     .stickheader {
     
         padding: 30px 50px;
