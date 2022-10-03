@@ -30,18 +30,11 @@
  }
 
 
- .logo {
-     text-align: center;
- }
 
- .logo img {
-     margin: 3rem 0;
-     max-width: 200px;
- }
 
  .subtitle {
-     padding: 0 100px;
-     margin: 0 0 35px 0;
+     padding: 100px;
+     margin: 35px;
      text-align: center;
      font-family: cursive;
  }
@@ -73,8 +66,10 @@
  }
 
  .title {
+
      text-align: center;
      padding: 10px;
+
  }
 
  h1 {
