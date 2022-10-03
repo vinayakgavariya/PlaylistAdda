@@ -1,109 +1,117 @@
  * {
-        margin: 0px;
-        padding: 0px;
-        
-       
-    }
-    .stickheader {
-    
-        padding: 30px 50px;
-        background: black;
-        color: #f1f1f1;
-        position: fixed;
-        top: 0;
-        width: 100%;
-        
-      }
-      #head:hover{
-        color: black;
-        background-color: greenyellow;
-
-      }
-      
-      
-    body {
-        background-color: black;
-        color: white;
-        font-family: arial;
-    }
-    
-
-    
-
-    .subtitle {
-        padding: 100px;
-        margin: 35px;
-        text-align: center;
-        font-family:cursive;
-    }
-
-    .main {
-
-        margin: 2%;
-    }
-
-    .card {
-        width: 20%;
-        display: inline-block;
-        box-shadow: 2px 2px 10px silver;
-        border-radius: 5px;
-        margin: 2%;
-    }
-    .card:hover{
-       box-shadow:  2px 2px 20px grey;
-    }
-
-    .image img {
-        width: 100%;
-        border-top-right-radius: 5px;
-        border-top-left-radius: 5px;
+     margin: 0px;
+     padding: 0px;
 
 
+ }
 
-    }
+ .stickheader {
 
-    .title {
+     padding: 30px 50px;
+     background: black;
+     color: #f1f1f1;
+     position: fixed;
+     top: 0;
+     width: 100%;
 
-        text-align: center;
-        padding: 10px;
+ }
 
-    }
+ #head:hover {
+     color: black;
+     background-color: greenyellow;
 
-    h1 {
-        font-size: 20px;
-    }
+ }
 
-    .des {
-        padding: 3px;
-        text-align: center;
 
-        padding-top: 10px;
-        border-bottom-right-radius: 5px;
-        border-bottom-left-radius: 5px;
-    }
+ body {
+     background-color: black;
+     color: white;
+     font-family: arial;
+ }
 
-    button {
-        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        color:white;
-        margin-top: 40px;
-        margin-bottom: 10px;
-        background-color: gray;
-        border: 1px solid black;
-        border-radius: 5px;
-        padding: 10px;
-        opacity: 0.7;
-    }
 
-    button:hover {
-        background-color: greenyellow;
-        color: black;
-        transition: .3s;
-        cursor: pointer;
-        opacity: 1;
-    }
+ .logo {
+     text-align: center;
+ }
 
-    .footer-heart {
-        font-size: larger;
-       text-align: center;
-       margin-top: 200px;
-    }
+ .logo img {
+     margin: 3rem 0;
+     max-width: 200px;
+ }
+
+ .subtitle {
+     padding: 0 100px;
+     margin: 0 0 35px 0;
+     text-align: center;
+     font-family: cursive;
+ }
+
+ .main {
+
+     margin: 2%;
+ }
+
+ .card {
+     width: 20%;
+     display: inline-block;
+     box-shadow: 2px 2px 10px silver;
+     border-radius: 5px;
+     margin: 2%;
+ }
+
+ .card:hover {
+     box-shadow: 2px 2px 20px grey;
+ }
+
+ .image img {
+     width: 100%;
+     border-top-right-radius: 5px;
+     border-top-left-radius: 5px;
+
+
+
+ }
+
+ .title {
+     text-align: center;
+     padding: 10px;
+ }
+
+ h1 {
+     font-size: 20px;
+ }
+
+ .des {
+     padding: 3px;
+     text-align: center;
+
+     padding-top: 10px;
+     border-bottom-right-radius: 5px;
+     border-bottom-left-radius: 5px;
+ }
+
+ button {
+     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+     color: white;
+     margin-top: 40px;
+     margin-bottom: 10px;
+     background-color: gray;
+     border: 1px solid black;
+     border-radius: 5px;
+     padding: 10px;
+     opacity: 0.7;
+ }
+
+ button:hover {
+     background-color: greenyellow;
+     color: black;
+     transition: .3s;
+     cursor: pointer;
+     opacity: 1;
+ }
+
+ .footer-heart {
+     font-size: larger;
+     text-align: center;
+     margin-top: 200px;
+ }
