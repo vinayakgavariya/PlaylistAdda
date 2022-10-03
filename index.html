@@ -9,8 +9,8 @@
 
 <body>
     <div class="header">
-        <h1>PlaylistAdda</h1>
-
+        <h1 class = "heading">PlaylistAdda</h1>
+        <input id = "search_bar" type="text" onkeyup="searchPlaylist()" placeholder="Search Playlists...">
     </div>
     <h3 class="subtitle">"A place to share your playlists with your friends."
     </h3>
@@ -254,6 +254,28 @@
                 src="https://github.githubassets.com/images/icons/emoji/unicode/2764.png">
         </g-emoji> by <a href="https://linktr.ee/vinayakgavariya">Vinayak Gavariya</a>
     </p>
+
+<script>
+function searchPlaylist() {
+  
+  var filter_text = document.getElementById("search_bar").value.toUpperCase();
+  var card = document.getElementsByClassName("card"); 
+
+  for (var i = 0; i < card.length; i++) {
+
+    var title = card[i].getElementsByClassName("title")[0];
+    var str = title.innerText || title.textContent;
+
+    if (str.toUpperCase().indexOf(filter_text) > -1) {
+
+      card[i].style.display = "";
+    } else {
+
+      card[i].style.display = "none";
+    }
+  }
+}
+</script>
 </body>
 
 </html>
