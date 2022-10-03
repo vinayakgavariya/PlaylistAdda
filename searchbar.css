@@ -1,0 +1,25 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-image: linear-gradient( 134.6deg,  rgba(201,37,107,1) 15.4%, rgba(116,16,124,1) 74.7% );
+}
+.container{
+    padding: 250px
+}
+#search{
+    padding: 15px;
+    position: relative;
+    left: 100px;
+    width: 550px;
+    border-radius: 15px;
+    border: 1px solid rgb(255, 201, 201);
+    box-shadow: 2px 3px rgb(219, 213, 213);
+}
+i{
+    position: relative;
+    left: 60px;
+   cursor: pointer;
+   color: rgb(216, 68, 144);
+}
