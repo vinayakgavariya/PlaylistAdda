@@ -261,8 +261,90 @@
                 <button>A sweet message by you</button>
             </div>
         </div>
+
+         <!--Charis's card -->
+
+
+         <div class="card">
+
+            <div class="image">
+                <img src="https://cdn.pixabay.com/photo/2020/04/12/10/37/sunset-5033708_960_720.jpg">
+            </div>
+            <div class="title">
+                <h1>
+                    Chaotic Calm</h1>
+                    <h6>by Charis</h6>
+            </div>
+            <div class="des">
+                <p><iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/6no3IopzgdtX3mWZQ1M6jV?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></p>
+                <button>When you want to drown out the noises outside</button>
+            </div>
+        </div>
+
+        <!--lingeshwaran cards -->
+
+        <div class="card">
+
+            <div class="image">
+                <img src="https://media-cldnry.s-nbcnews.com/image/upload/t_fit-760w,f_auto,q_auto:best/streams/2013/May/130524/6C7573771-mov_hangover32_130307.jpg">
+
+            </div>
+            <div class="title">
+                <h1>
+                    Vibe of teen</h1>
+            </div>
+            <div class="des">
+                <p><iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/0zr93iWjQByUIjMXxakzJY?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></p>
+                <button>If you want to get into vide 🤩</button>
+            </div>
+        </div>
+        
+        <!-- Ishika's cards -->
+        <div class="card">
+
+            <div class="image">
+                <img src="https://1.bp.blogspot.com/-zLp2XuxkIgc/YPUXr6-sIrI/AAAAAAABfxc/yeseTLz7OAYVuGjutyOffHPbqXXf5kOuQCLcBGAsYHQ/s670/Shah_ExperimentsInListening_cover.jpg">
+
+            </div>
+            <div class="title">
+                <h1>
+                    ~Blurry Nights~</h1>
+            </div>
+            <div class="des">
+                <p><iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/1p9i1M946IBJ4zHITyKs9A?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></p>
+                <button>Don't be shocked, you deserve it.</button>
+            </div>
+        </div>
+
+        
+
         <!--cards -->
 
+
+        <!--SeptiCalls's card -->
+        <div class="card">
+
+            <div class="image">
+                <img
+                    src="https://cdn.pixabay.com/photo/2020/07/14/16/02/manga-5404746_1280.jpg">
+            </div>
+            <div class="title">
+                <h1>
+                    You Know I Like That</h1>
+                <h6>by SeptiCalls</h6>
+            </div>
+            <div class="des">
+                <iframe style="border-radius:12px"
+                    src="https://open.spotify.com/embed/playlist/31WmG68IbPrklrobK7JbjH?utm_source=generator"
+                    width="100%" height="380" frameBorder="0" allowfullscreen=""
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                    loading="lazy"></iframe>
+                <button>Seek thy enlightenment</button>
+
+            </div>
+        </div>
+
+        <!--cards -->
         <div class="card">
 
             <div class="image">
@@ -280,6 +362,23 @@
         </div>
         <!--Vinayak's card -->
 
+<div class="card">
+
+            <div class="image">
+                <img src="https://cdn.pixabay.com/photo/2018/01/09/03/49/the-natural-scenery-3070808_1280.jpg">
+            </div>
+            <div class="title">
+                <h1>Mix J-Pop</h1>
+                <h6>by riskodwis</h6>
+            </div>
+            <div class="des">
+                <iframe style="border-radius:12px"
+                    src="https://open.spotify.com/embed/playlist/37i9dQZF1EQoowv2cDraCW?utm_source=generator"
+                    width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; 
+                picture-in-picture" loading="lazy"></iframe>
+                <button>love music from different countries</button>
+            </div>
+        </div>
 
         <div class="card">
 
@@ -306,42 +405,7 @@
         </g-emoji> by <a href="https://linktr.ee/vinayakgavariya">Vinayak Gavariya</a>
     </p>
 
-<script>
-function searchPlaylist() {
-  
-  var filter_text = document.getElementById("search_bar").value.toUpperCase();
-  var card = document.getElementsByClassName("card"); 
-
-  for (var i = 0; i < card.length; i++) {
-
-    var title = card[i].getElementsByClassName("title")[0];
-    var str = title.innerText || title.textContent;
-
-    if (str.toUpperCase().indexOf(filter_text) > -1) {
-
-      card[i].style.display = "";
-    } else {
-
-      card[i].style.display = "none";
-    }
-  }
-}
-
-//light/dark mode toggle js
-const darkModeToggle = document.getElementById('dark-mode-toggle');
-
-darkModeToggle.onclick = () => {
-  document.body.classList.toggle('darkmode');
-  document.getElementById("myHeader").classList.toggle('darkmode');
-    if(document.body.classList.contains("darkmode") ||document.getElementById("myHeader").classList.contains("darkmode") ){
-        darkModeToggle.textContent = "Switch to Dark Mode";
-    }else{
-        darkModeToggle.textContent = "Switch to Light Mode"
-    }
-}
-
-
-</script>
+    <script src="index.js"></script>
 </body>
 
 </html>
