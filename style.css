@@ -2,6 +2,15 @@
   margin: 0px;
   padding: 0px;
 }
+#myHeader{
+  background-color: grey;
+ 
+}
+#myHeader:hover{
+  cursor: pointer;
+  background-color: rgb(99, 106, 113);
+ color: plum;
+}
 .stickheader {
   padding: 10px 30px;
   background: black;
