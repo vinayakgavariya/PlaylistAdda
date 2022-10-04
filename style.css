@@ -2,7 +2,7 @@
   margin: 0px;
   padding: 0px;
 }
-.stickheader {
+  .stickheader {
   padding: 10px 30px;
   background: black;
   color: #f1f1f1;
@@ -131,16 +131,15 @@ button:hover {
 
 .card--y--list {
   display: flex;
-  flex-wrap: nowrap;
-  gap: 20px;
-  overflow-x: auto;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding-top: 80px;
 }
 
 .card--y {
   flex: 0 0 auto;
   display: flex;
   flex-direction: column;
-  margin-left: 50px;
   background-color: antiquewhite;
   max-width: 500px;
   color: rgb(46, 13, 13);
