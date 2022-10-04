@@ -17,3 +17,16 @@ function searchPlaylist() {
         }
     }
 }
+
+//light/dark mode toggle js
+const darkModeToggle = document.getElementById('dark-mode-toggle');
+
+darkModeToggle.onclick = () => {
+  document.body.classList.toggle('darkmode');
+  document.getElementById("myHeader").classList.toggle('darkmode');
+    if(document.body.classList.contains("darkmode") ||document.getElementById("myHeader").classList.contains("darkmode") ){
+        darkModeToggle.textContent = "Switch to Dark Mode";
+    }else{
+        darkModeToggle.textContent = "Switch to Light Mode"
+    }
+}
