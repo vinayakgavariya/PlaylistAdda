@@ -49,17 +49,38 @@ body {
   padding: 10px;
 }
 
-.main {
-  margin: 2%;
-}
+   .main {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        margin: 2%;
+    }
 
-.card {
-  width: 20%;
-  display: inline-block;
-  box-shadow: 2px 2px 10px silver;
-  border-radius: 5px;
-  margin: 2%;
-}
+    .card {
+        width: 20.01%;
+        display: inline-block;
+        box-shadow: 2px 2px 10px silver;
+        border-radius: 5px;
+        margin: 2% auto;
+    }
+
+    @media (max-width:1368px){
+        .card{
+            width: 25.01%;
+        }
+    }
+    @media (max-width:1070px){
+        .card{
+            width: 40%;
+            margin: 2.5% auto;
+        }
+    }
+    @media (max-width:700px){
+        .card{
+            width: 70%;
+            margin: 4% auto;
+        }
+    }
 .card:hover {
   box-shadow: 2px 2px 20px grey;
 }
