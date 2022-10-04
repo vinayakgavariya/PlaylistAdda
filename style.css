@@ -37,6 +37,17 @@
         font-family:cursive;
     }
 
+    
+
+    #search_bar {
+        float: right;
+        display: block;
+        text-align: left;
+        width: 30%;
+        margin-right: 1%;
+        padding: 10px;
+    }
+
     .main {
 
         margin: 2%;
