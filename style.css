@@ -129,6 +129,41 @@ button:hover {
   opacity: 1;
 }
 
+.card--y--list {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+  overflow-x: auto;
+}
+
+.card--y {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  margin-left: 50px;
+  background-color: antiquewhite;
+  max-width: 500px;
+  color: rgb(46, 13, 13);
+  border-radius: 15px;
+  overflow: hidden;
+  margin-bottom: 10px;  
+}
+
+.card--y--text {
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  letter-spacing: -1px;
+}
+
+.card--y--des {
+  padding: 5px 22px;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+}
+
 .footer-heart {
   font-size: larger;
   text-align: center;
