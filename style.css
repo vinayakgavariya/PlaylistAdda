@@ -94,6 +94,7 @@
      text-align: center;
      margin-top: 200px;
  }
+ /* CSS for dark mode  */
  
  body {
      padding: 25px;
@@ -105,8 +106,4 @@
  .dark-mode {
      background-color: black;
      color: white;
- }
- 
- .darkbtn {
-     float: right;
  }
