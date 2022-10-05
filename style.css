@@ -3,7 +3,9 @@
   padding: 0px;
 }
 
+
 .stickheader {
+  .stickheader {
   padding: 10px 30px;
   background: black;
   color: #f1f1f1;
@@ -166,11 +168,28 @@ button:hover {
   user-select: none;
 }
 
+
+.yt--player {
+  color: white;
+  text-align: center;
+  font-family: serif;
+  font-weight: bolder;
+  text-decoration: overline;
+  padding-top: 80px;
+  height: 50px;
+}
 .card--y--list {
   display: flex;
+
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding-top: 80px;
+
   flex-wrap: nowrap;
   gap: 20px;
   overflow-x: auto;
+  padding: 20px;
+
 }
 
 .card--y:hover {
@@ -181,19 +200,26 @@ button:hover {
   flex: 0 0 auto;
   display: flex;
   flex-direction: column;
-  margin-left: 50px;
   background-color: antiquewhite;
   max-width: 500px;
-  color: rgb(46, 13, 13);
   border-radius: 15px;
   overflow: hidden;
-  margin-bottom: 10px;
-}
 
+  margin-bottom: 10px;
+  margin-bottom: 10px; 
+  box-shadow: 5px 10px 8px #888888;
+  filter: grayscale(80%); 
+}
+.card--y:hover {
+  box-shadow: 5px 12px 12px #888888;
+  filter: grayscale(0);
+  transform: scale(1.05) rotate(2deg);
+}
 .card--y--text {
   padding: 10px;
   justify-content: center;
   align-items: center;
+  color: rgb(46, 13, 13);
   text-align: center;
   /* letter-spacing: -1px; */
 }
