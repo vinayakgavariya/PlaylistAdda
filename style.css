@@ -2,6 +2,7 @@
   margin: 0px;
   padding: 0px;
 }
+
 .stickheader {
   padding: 10px 30px;
   background: black;
@@ -15,6 +16,7 @@
   justify-content: space-between;
   box-sizing: border-box;
 }
+
 #head:hover {
   color: black;
   background-color: greenyellow;
@@ -25,6 +27,15 @@
   border-radius: 10px;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
+}
+
+.spotify-heading {
+  background-color: rgb(27, 111, 14);
+  text-align: center;
+  padding: 30px;
+  font-family: 'poppins';
+  font-size: 2.5rem;
+  user-select: none;
 }
 
 body {
@@ -49,40 +60,44 @@ body {
   padding: 10px;
 }
 
-   .main {
-        display: flex;
-        justify-content: space-evenly;
-        flex-wrap: wrap;
-        margin: 2%;
-    }
+.main {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin: 2%;
+}
 
-    .card {
-        width: 20.01%;
-        display: inline-block;
-        box-shadow: 2px 2px 10px silver;
-        border-radius: 5px;
-        margin: 2% auto;
-    }
+.card {
+  width: 20.01%;
+  display: inline-block;
+  /* box-shadow: 2px 2px 10px silver; */
+  border-radius: 10px;
+  margin: 2% auto;
+}
 
-    @media (max-width:1368px){
-        .card{
-            width: 25.01%;
-        }
-    }
-    @media (max-width:1070px){
-        .card{
-            width: 40%;
-            margin: 2.5% auto;
-        }
-    }
-    @media (max-width:700px){
-        .card{
-            width: 70%;
-            margin: 4% auto;
-        }
-    }
+/* Media Queries for responsiveness */
+@media (max-width:1368px) {
+  .card {
+    width: 25.01%;
+  }
+}
+
+@media (max-width:1070px) {
+  .card {
+    width: 40%;
+    margin: 2.5% auto;
+  }
+}
+
+@media (max-width:700px) {
+  .card {
+    width: 70%;
+    margin: 4% auto;
+  }
+}
+
 .card:hover {
-  box-shadow: 2px 2px 20px grey;
+  box-shadow: 0px 3px 15px rgb(12, 170, 20);
 }
 
 .image img {
@@ -94,6 +109,14 @@ body {
 .title {
   text-align: center;
   padding: 10px;
+  user-select: none;
+  /*user cannot select the text logo*/
+  cursor: pointer;
+}
+
+.title a{
+  color: white;
+  text-decoration: none;
 }
 
 h1 {
@@ -103,7 +126,6 @@ h1 {
 .des {
   padding: 3px;
   text-align: center;
-
   padding-top: 10px;
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
@@ -129,11 +151,30 @@ button:hover {
   opacity: 1;
 }
 
+/* Yt card css */
+
+.container {
+  padding-top: 20px;
+}
+
+.yt-heading {
+  background-color: rgb(171, 16, 16);
+  text-align: center;
+  padding: 30px;
+  font-family: 'poppins';
+  font-size: 2.5rem;
+  user-select: none;
+}
+
 .card--y--list {
   display: flex;
   flex-wrap: nowrap;
   gap: 20px;
   overflow-x: auto;
+}
+
+.card--y:hover {
+  box-shadow: 0px 3px 20px rgb(229, 44, 44);
 }
 
 .card--y {
@@ -146,7 +187,7 @@ button:hover {
   color: rgb(46, 13, 13);
   border-radius: 15px;
   overflow: hidden;
-  margin-bottom: 10px;  
+  margin-bottom: 10px;
 }
 
 .card--y--text {
@@ -154,7 +195,7 @@ button:hover {
   justify-content: center;
   align-items: center;
   text-align: center;
-  letter-spacing: -1px;
+  /* letter-spacing: -1px; */
 }
 
 .card--y--des {
@@ -164,6 +205,8 @@ button:hover {
   align-items: center;
 }
 
+
+/* Footer CSS */
 .footer-heart {
   font-size: larger;
   text-align: center;
