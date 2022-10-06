@@ -11,6 +11,13 @@ A fun project for friends through which everyone can share their music playlists
 <a href="https://github.com/VG-1" ><img src="https://img.shields.io/badge/Contributions-welcome-green.svg?style=flat&logo=github" alt="Contributions" /></a>
 
 </div>
+<div align="center">
+    <p>
+	    <a name="stars"><img src="https://img.shields.io/github/stars/PlayListAdda/introduction-to-bash-scripting?style=for-the-badge"></a>
+	    <a name="forks"><img src="https://img.shields.io/github/forks/PlayListAdda/introduction-to-bash-scripting?logoColor=green&style=for-the-badge"></a>
+	    <a name="contributions"><img src="https://img.shields.io/github/contributors/PlayListAdda/introduction-to-bash-scripting?logoColor=green&style=for-the-badge"></a>
+    </p>
+</div>
 
 
 ### This repository aims to help code beginners with their first successful pull request and open-source contribution. :partying_face:
