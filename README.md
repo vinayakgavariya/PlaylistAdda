@@ -13,9 +13,9 @@ A fun project for friends through which everyone can share their music playlists
 </div>
 <div align="center">
     <p>
-	    <a name="stars"><img src="https://img.shields.io/github/stars/PlayListAdda/introduction-to-bash-scripting?style=for-the-badge"></a>
-	    <a name="forks"><img src="https://img.shields.io/github/forks/PlayListAdda/introduction-to-bash-scripting?logoColor=green&style=for-the-badge"></a>
-	    <a name="contributions"><img src="https://img.shields.io/github/contributors/PlayListAdda/introduction-to-bash-scripting?logoColor=green&style=for-the-badge"></a>
+	    <a name="stars"><img src="https://img.shields.io/github/stars/VG-1/PlayListAdda?style=for-the-badge"></a>
+	    <a name="forks"><img src="https://img.shields.io/github/forks/VG-1/PlayListAdda?logoColor=green&style=for-the-badge"></a>
+	    <a name="contributions"><img src="https://img.shields.io/github/contributors/VG-1/PlayListAdda?logoColor=green&style=for-the-badge"></a>
     </p>
 </div>
 
