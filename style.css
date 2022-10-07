@@ -7,7 +7,7 @@
 .stickheader {
   .stickheader {
   padding: 10px 30px;
-  background: black;
+  background:#151617;
   color: #f1f1f1;
   position: fixed;
   top: 0;
@@ -53,13 +53,25 @@ body {
   font-family: cursive;
 }
 
+.brand {
+  font-family: 'Kaushan Script', cursive;
+  font-size: 2rem;
+}
+
 #search_bar {
   float: right;
   display: block;
   text-align: left;
-  width: 30%;
+  width: 20%;
   margin-right: 1%;
   padding: 10px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+}
+
+::placeholder {
+  font-size: 1.1rem;
 }
 
 .main {
