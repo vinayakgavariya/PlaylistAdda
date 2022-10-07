@@ -16,12 +16,15 @@
 
 
 <body>
-    <div class="stickheader" id="myHeader">
+    <header class="stickheader" id="myHeader">
         <h2 class="title brand"> PlayListAdda</h2>
         <input id="search_bar" type="text" onkeyup="searchPlaylist()" placeholder="Search Playlists...">
-    </div>
-    <h3 class="subtitle">"A place to share your playlists with your friends."
-    </h3>
+        <div class="toggle-mode">
+            <img class="moon" data-set="sun" src="images/moon.png" alt="dark-mode">
+            <img class="sun"  data-set="moon" src="images/sun.png"  alt="light-mode">
+        </div>
+    </header>
+    <h3 class="subtitle">"A place to share your playlists with your friends."</h3>
     <div class="main">
 
         <!--Haspdecrypted's card -->
