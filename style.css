@@ -200,5 +200,5 @@ button:hover {
 .footer-heart {
   font-size: larger;
   text-align: center;
-  margin-top: 200px;
+  margin: 200px auto 20px;
 }
