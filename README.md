@@ -28,6 +28,10 @@ A fun project for friends through which everyone can share their music playlists
 
 ### This repository is open to all members of the GitHub community. Any member can contribute to this project! The only thing which you need to keep in mind is that it should be genuine PR :grin:
 
+![playlistAdda-Image](https://user-images.githubusercontent.com/101972392/194784747-26485f55-3508-4b6a-857e-b59be292d914.jpg)
+
+![playlistAdda-Image-1](https://user-images.githubusercontent.com/101972392/194784777-8dfd17a3-336b-4147-8f4f-4c594c6d40da.jpg)
+
 ## What is Hacktoberfest? :thinking:
 A month-long celebration from October 1st to October 31st presented by [Digital Ocean](https://hacktoberfest.digitalocean.com/) and [DEV Community](https://dev.to/) collaborated with [GitHub](https://github.com/blog/2433-celebrate-open-source-this-october-with-hacktoberfest) to get people involved in [Open Source](https://github.com/open-source). Create your very first pull request to any public repository on GitHub and contribute to the open-source developer community.
 
@@ -45,7 +49,7 @@ flowchart LR
     Fork[Fork the project]-->branch[Create a New Branch]
     branch-->Edit[Edit file]
     Edit-->commit[Commit the changes]
-    commit -->|Finally|creatpr((Create a Pull Request))
+    commit -->|Finally|createPR((Create a Pull Request))
     
  ```
 
