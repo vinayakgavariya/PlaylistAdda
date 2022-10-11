@@ -157,7 +157,6 @@ button:hover {
   justify-content: space-evenly;
   padding-top: 80px;
 
-  flex-wrap: nowrap;
   gap: 20px;
   overflow-x: auto;
   padding: 20px;
@@ -175,6 +174,7 @@ button:hover {
   margin-bottom: 10px; 
   box-shadow: 5px 10px 8px #888888;
   filter: grayscale(80%); 
+  margin: auto;
 }
 .card--y:hover {
   box-shadow: 5px 12px 12px #888888;
