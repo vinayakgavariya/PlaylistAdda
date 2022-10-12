@@ -213,6 +213,7 @@ button:hover {
  padding: 21px;
  background-color: #2666cf;
  border-radius: 25%;
+ display: none;
 }
 
 .js .cd-top--fade-out {
