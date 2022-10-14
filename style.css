@@ -74,6 +74,8 @@ body {
   width: 20.01%;
   background: #000;
   margin: 3% auto;
+  display: flex;
+  flex-direction: column;
 }
 .card::before,
 .card::after {
@@ -115,6 +117,23 @@ body {
   }
   50% {
     background-position: 300%;
+  }
+}
+@media (max-width: 1368px) {
+  .card {
+    width: 25.01%;
+  }
+}
+@media (max-width: 1070px) {
+  .card {
+    width: 40%;
+    margin: 2.5% auto;
+  }
+}
+@media (max-width: 700px) {
+  .card {
+    width: 70%;
+    margin: 4% auto;
   }
 }
 .image img {
