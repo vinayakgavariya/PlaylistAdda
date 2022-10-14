@@ -2,9 +2,9 @@
   margin: 0px;
   padding: 0px;
 }
-  .stickheader {
+.stickheader {
   padding: 10px 30px;
-  background:#151617;
+  background: #151617;
   color: #f1f1f1;
   position: fixed;
   top: 0;
@@ -23,8 +23,8 @@
 .stickheader input {
   outline: none;
   border-radius: 10px;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
 }
 
 body {
@@ -61,42 +61,62 @@ body {
   font-size: 1.1rem;
 }
 
-   .main {
-        display: flex;
-        justify-content: space-evenly;
-        flex-wrap: wrap;
-        margin: 2%;
-    }
-
-    .card {
-        width: 20.01%;
-        display: inline-block;
-        box-shadow: 2px 2px 10px silver;
-        border-radius: 5px;
-        margin: 2% auto;
-    }
-
-    @media (max-width:1368px){
-        .card{
-            width: 25.01%;
-        }
-    }
-    @media (max-width:1070px){
-        .card{
-            width: 40%;
-            margin: 2.5% auto;
-        }
-    }
-    @media (max-width:700px){
-        .card{
-            width: 70%;
-            margin: 4% auto;
-        }
-    }
-.card:hover {
-  box-shadow: 2px 2px 20px grey;
+.main {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin: 2%;
 }
 
+.card {
+  position: relative;
+  border-radius: 6px;
+  width: 20.01%;
+  background: #000;
+  margin: 3% auto;
+}
+.card::before,
+.card::after {
+  content: '';
+  z-index: -1;
+  position: absolute;
+  width: calc(100% + 30px);
+  height: calc(100% + 30px);
+  top: -15px;
+  left: -15px;
+  border-radius: 8px;
+  background: linear-gradient(
+    60deg,
+    #ffff00,
+    #00ff00,
+    #0099ff,
+    #001aff,
+    #a200ff,
+    #ff0055,
+    #ff0000,
+    #ff0055,
+    #ff0000,
+    #ffff00,
+    #00ff00,
+    #0099ff,
+    #001aff,
+    #a200ff
+  );
+  background-size: 300%;
+  animation: border 10s linear infinite;
+}
+.card::after {
+  filter: blur(30px);
+}
+@keyframes border {
+  0%,
+  100% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 300%;
+  }
+}
 .image img {
   width: 100%;
   border-top-right-radius: 5px;
@@ -122,7 +142,7 @@ h1 {
 }
 
 button {
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   color: white;
   margin-top: 40px;
   margin-bottom: 10px;
@@ -161,7 +181,6 @@ button:hover {
   gap: 20px;
   overflow-x: auto;
   padding: 20px;
-
 }
 
 .card--y {
@@ -172,9 +191,9 @@ button:hover {
   max-width: 500px;
   border-radius: 15px;
   overflow: hidden;
-  margin-bottom: 10px; 
+  margin-bottom: 10px;
   box-shadow: 5px 10px 8px #888888;
-  filter: grayscale(80%); 
+  filter: grayscale(80%);
 }
 .card--y:hover {
   box-shadow: 5px 12px 12px #888888;
