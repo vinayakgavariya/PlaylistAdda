@@ -248,4 +248,16 @@ button:hover {
  background-color: hsla(var(--cd-color-3-h),var(--cd-color-3-s),var(--cd-color-3-l),0.8);
 }
 
+/* for Dark mode */
+.d_mode{
+  text-align: right;
+}
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+.light-mode {
+  background-color: white;
+  color: black;
+}
 /* End Bottom to Top */
