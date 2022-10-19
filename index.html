@@ -23,8 +23,7 @@
         <h2 class="title brand"> PlayListAdda</h2>
         <input id="search_bar" type="text" onkeyup="searchPlaylist()" placeholder="Search Playlists...">
     </div>
-    <h3 class="subtitle">"A place to share your playlists with your friends."
-    </h3>
+    <h3 class="subtitle"> <span class="auto-type"></span></h3>
     <div class="main">
 
 
@@ -1750,6 +1749,22 @@
         integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
     <script src="index.js"></script>
 
+
+    <!-- CDN to Load the typed.js library  -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+    <!-- Script written for typed.js -->
+    <script>
+        var typed = new Typed(".auto-type", {
+            // Strings required to display
+            strings: ["Welcome to PlayListAdda !!","“Where words fail, music speaks”", "A place to share your playlists with your friends !!", "Built with Love &#9829;  " ],
+            // Speed of the animation 
+            typeSpeed: 60,  
+            backSpeed: 20,
+            backDelay: 500,
+            loop: true
+        })
+    </script>
 </body>
 
 
