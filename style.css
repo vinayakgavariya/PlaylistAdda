@@ -36,11 +36,17 @@ body {
 }
 
 .subtitle {
-  padding: 100px;
-  margin: 35px;
+  padding-top: 150px;
+  margin-bottom: 80px;
   text-align: center;
   font-size: 1.75rem;
   font-family: 'Raleway', sans-serif;
+}
+
+@media (max-width:620px){
+  .subtitle{
+      font-size: 1.10rem;
+  }
 }
 
 .brand {
