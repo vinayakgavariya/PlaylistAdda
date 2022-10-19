@@ -48,6 +48,11 @@ body {
       font-size: 1.10rem;
   }
 }
+@media (max-width:400px){
+  .subtitle{
+      font-size: 0.80rem;
+  }
+}
 
 .brand {
   font-family: 'Kaushan Script', cursive;
