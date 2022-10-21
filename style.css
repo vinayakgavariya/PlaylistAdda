@@ -87,7 +87,7 @@ body {
         display: inline-block;
         box-shadow: 2px 2px 10px silver;
         border-radius: 5px;
-        margin: 2% auto;
+        margin: 2% 2em;
     }
 
     @media (max-width:1368px){
