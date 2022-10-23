@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+
 * {
   margin: 0px;
   padding: 0px;
@@ -34,10 +36,22 @@ body {
 }
 
 .subtitle {
-  padding: 100px;
-  margin: 35px;
+  padding-top: 150px;
+  margin-bottom: 80px;
   text-align: center;
-  font-family: cursive;
+  font-size: 1.75rem;
+  font-family: 'Raleway', sans-serif;
+}
+
+@media (max-width:620px){
+  .subtitle{
+      font-size: 1.10rem;
+  }
+}
+@media (max-width:400px){
+  .subtitle{
+      font-size: 0.80rem;
+  }
 }
 
 .brand {
@@ -99,6 +113,7 @@ body {
 
 .image img {
   width: 100%;
+  height: 200px;
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;
 }
@@ -157,7 +172,6 @@ button:hover {
   justify-content: space-evenly;
   padding-top: 80px;
 
-  flex-wrap: nowrap;
   gap: 20px;
   overflow-x: auto;
   padding: 20px;
@@ -175,6 +189,7 @@ button:hover {
   margin-bottom: 10px; 
   box-shadow: 5px 10px 8px #888888;
   filter: grayscale(80%); 
+  margin: auto;
 }
 .card--y:hover {
   box-shadow: 5px 12px 12px #888888;
@@ -213,6 +228,7 @@ button:hover {
  padding: 21px;
  background-color: #2666cf;
  border-radius: 25%;
+ display: none;
 }
 
 .js .cd-top--fade-out {
