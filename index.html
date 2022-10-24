@@ -36,6 +36,7 @@
   <body>
     <div class="stickheader" id="myHeader">
       <h2 class="title brand">PlayListAdda</h2>
+      <img id="darkmode" src="sun.png" alt="darkmode">
       <input
         id="search_bar"
         type="text"
@@ -3034,5 +3035,18 @@
         loop: true,
       });
     </script>
+
+<script>
+  var darkmode = document.getElementById("darkmode");
+  darkmode.onclick = function () {
+      document.body.classList.toggle("dark-theme");
+      if (document.body.classList.contains("dark-theme")) {
+          darkmode.src = "moon.png";
+      } else {
+          darkmode.src = "sun.png";
+      }
+  }
+</script>
+
   </body>
 </html>
