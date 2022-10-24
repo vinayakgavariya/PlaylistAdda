@@ -4,10 +4,27 @@
   margin: 0px;
   padding: 0px;
 }
+
+:root{
+  --primary-color:white;
+  --secondary-color:black;
+  --third-color:blue;
+}
+.dark-theme{
+  --primary-color:black;
+  --secondary-color:white;
+  --third-color:white;
+}
+#darkmode{
+  height: 50px;
+  width: 65px;
+  float: left;
+}
+
 .stickheader {
   padding: 10px 30px;
-  background: #151617;
-  color: #f1f1f1;
+  background: var(--secondary-color);
+  color: var(--primary-color);
   position: fixed;
   top: 0;
   width: 100%;
@@ -30,8 +47,8 @@
 }
 
 body {
-  background-color: black;
-  color: white;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
   font-family: arial;
 }
 
@@ -66,7 +83,7 @@ body {
   width: 20%;
   margin-right: 1%;
   padding: 10px;
-  border: none;
+  border: 2px solid var(--primary-color);
   outline: none;
   font-size: 1rem;
 }
@@ -85,7 +102,7 @@ body {
 .card {
   width: 20.01%;
   display: inline-block;
-  box-shadow: 2px 2px 10px silver;
+  box-shadow: 2px 2px 10px var(--primary-color);
   border-radius: 5px;
   margin: 2% auto;
 }
@@ -138,11 +155,11 @@ h1 {
 
 button {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  color: white;
+  color: var(--primary-color);
   margin-top: 40px;
   margin-bottom: 10px;
   background-color: gray;
-  border: 1px solid black;
+  border: 1px solid var(--secondary-color);
   border-radius: 5px;
   padding: 10px;
   opacity: 0.7;
@@ -150,14 +167,14 @@ button {
 
 button:hover {
   background-color: greenyellow;
-  color: black;
+  color: var(--secondary-color);
   transition: 0.3s;
   cursor: pointer;
   opacity: 1;
 }
 
 .yt--player {
-  color: white;
+  color: var(--primary-color);
   text-align: center;
   font-family: serif;
   font-weight: bolder;
@@ -181,7 +198,7 @@ button:hover {
   flex: 0 0 auto;
   display: flex;
   flex-direction: column;
-  background-color: antiquewhite;
+  background-color: var(--primary-color);
   max-width: 500px;
   border-radius: 15px;
   overflow: hidden;
@@ -234,7 +251,7 @@ html::-webkit-scrollbar-thumb:hover {
 }
 
 html::-webkit-scrollbar-track {
-  background-color: #151619;
+  background-color: var(--secondary-color);
   box-shadow: inset 0 0 3px;
   border-radius: 10px;
 }
