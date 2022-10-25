@@ -4,6 +4,13 @@
   margin: 0px;
   padding: 0px;
 }
+*body {
+  background-color: black;
+  color: white;
+  font-family: arial;
+  text-decoration: none;
+
+}
 .stickheader {
   padding: 10px 30px;
   background: #151617;
@@ -41,6 +48,7 @@ body {
   text-align: center;
   font-size: 1.75rem;
   font-family: "Raleway", sans-serif;
+  color: white;
 }
 
 @media (max-width: 620px) {
@@ -161,7 +169,7 @@ button:hover {
   text-align: center;
   font-family: serif;
   font-weight: bolder;
-  text-decoration: overline;
+  /* text-decoration: overline; */
   padding-top: 80px;
   height: 50px;
 }
@@ -291,6 +299,29 @@ html::-webkit-scrollbar-track:hover {
     var(--cd-color-3-l),
     0.8
   );
+}
+.footer{
+  /* padding: 2rem; */
+  font-weight: 100;
+  text-decoration: none;
+  font-family: Arial, Helvetica;
+  font-style: normal;
+  background-color: #252020;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  max-width: 100%;
+ 
+}
+.Copyright{
+ 
+  height: 0%;
+  margin-left: 5rem;
+}
+.logo{
+ 
+  margin-left: 5rem;
 }
 
 /* End Bottom to Top */
