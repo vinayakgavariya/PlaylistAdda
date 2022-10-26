@@ -386,3 +386,21 @@ html::-webkit-scrollbar-track:hover {
 }
 
 /* End Bottom to Top */
+
+
+
+/* search icon */
+
+#search-icon{
+  display: none;
+}
+
+@media screen and (max-width:500px) {
+  #search-icon{
+    display: contents;
+  }
+  #search_bar{
+    display: none;
+  }
+}
+
