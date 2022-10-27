@@ -50,4 +50,9 @@ $(document).ready(function () {
     });
 
 
-  });
+});
+  
+function show_bar() {
+  $("#search-icon").hide();
+  $("#search_bar").show();
+}
