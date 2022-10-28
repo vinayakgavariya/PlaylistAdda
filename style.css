@@ -227,32 +227,6 @@ button:hover {
   margin: 200px auto 20px;
 }
 
-/* ScrollBar */
-html::-webkit-scrollbar {
-  width: 1vw;
-}
-
-html::-webkit-scrollbar-thumb {
-  background-color: #8885;
-  height: 5vw;
-  box-shadow: inset 0 0 5px;
-  border-radius: 10px;
-}
-
-html::-webkit-scrollbar-thumb:hover {
-  background-color: #777;
-}
-
-html::-webkit-scrollbar-track {
-  background-color: #151619;
-  box-shadow: inset 0 0 3px;
-  border-radius: 10px;
-}
-
-html::-webkit-scrollbar-track:hover {
-  background-color: #333;
-}
-
 /* For Scroll Button*/
 #toBotBtn {
   position: fixed;
@@ -404,3 +378,30 @@ html::-webkit-scrollbar-track:hover {
   }
 }
 
+
+/* ScrollBar */
+html::-webkit-scrollbar {
+  width: 1vw;
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: rgba(182, 179, 179, 0.384);
+  height: 5vw;
+  box-shadow: inset 0 0 5px;
+  border-radius: 10px;
+}
+
+html::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(182, 179, 179);
+}
+
+html::-webkit-scrollbar-track {
+  background-color: rgb(76, 76, 76);
+  /* background-color: #6d6d6d; */
+  box-shadow: inset 0 0 3px;
+  border-radius: 10px;
+}
+
+html::-webkit-scrollbar-track:hover {
+  background-color: rgb(76, 76, 76);
+}
