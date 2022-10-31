@@ -26,6 +26,12 @@ $(document).ready(function () {
       } else {
         $("#toTopBtn").fadeOut();
       }
+
+      if ($(this).scrollTop() > 20) {
+        $("#toBotBtn").fadeIn();
+      } else {
+        $("#toBotBtn").fadeOut();
+      }
     });
   
     $("#toTopBtn").click(function () {
@@ -37,4 +43,16 @@ $(document).ready(function () {
       );
       return false;
     });
-  });
+
+    $("#toBotBtn").click(function () {
+        $("html, body").animate({ scrollTop: $(document).height() }, 1000);
+      return false;
+    });
+
+
+});
+  
+function show_bar() {
+  $("#search-icon").hide();
+  $("#search_bar").show();
+}
