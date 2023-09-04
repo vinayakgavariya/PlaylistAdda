@@ -118,6 +118,7 @@ body {
 }
 .card:hover {
   box-shadow: 2px 2px 20px grey;
+  cursor: pointer;
 }
 
 .image img {
