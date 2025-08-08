@@ -1,48 +1,90 @@
-name: Claude PR Assistant
+name: Claude Commit Analysis
 
 on:
+  workflow_dispatch:
+    inputs:
+      analysis_type:
+        description: "Type of analysis to perform"
+        required: true
+        type: choice
+        options:
+          - summarize-commit
+          - security-review
+          - docs-impact
+        default: "summarize-commit"
+  pull_request:
+    types: [opened, synchronize, reopened]
   issue_comment:
     types: [created]
-  pull_request_review_comment:
-    types: [created]
-  issues:
-    types: [opened, assigned]
-  pull_request_review:
-    types: [submitted]
 
 jobs:
-  claude-code-action:
-    if: |
-      (github.event_name == 'issue_comment' && contains(github.event.comment.body, '@claude')) ||
-      (github.event_name == 'pull_request_review_comment' && contains(github.event.comment.body, '@claude')) ||
-      (github.event_name == 'pull_request_review' && contains(github.event.review.body, '@claude')) ||
-      (github.event_name == 'issues' && contains(github.event.issue.body, '@claude'))
+  analyze-commit:
+    if: >-
+      ${{ github.event_name == 'pull_request' || github.event_name == 'workflow_dispatch' ||
+          (github.event_name == 'issue_comment' && github.event.issue.pull_request &&
+           (github.actor_association == 'MEMBER' || github.actor_association == 'OWNER' || github.actor_association == 'COLLABORATOR') &&
+           (contains(github.event.comment.body, '/claude') || contains(github.event.comment.body, '/docs-impact') || contains(github.event.comment.body, '/security-review') || contains(github.event.comment.body, '/summarize-commit'))
+          )
+      }}
     runs-on: ubuntu-latest
     permissions:
       contents: read
-      pull-requests: read
-      issues: read
+      pull-requests: write
+      issues: write
       id-token: write
+
     steps:
+      - name: Resolve ref
+        id: ref
+        run: |
+          if [ "${{ github.event_name }}" = "issue_comment" ]; then
+            echo "ref=$(jq -r '.pull_request.head.sha' <<< "$(gh api repos/${{ github.repository }}/pulls/${{ github.event.issue.number }})")" >> $GITHUB_OUTPUT
+          else
+            echo "ref=${{ github.event.pull_request.head.sha || github.sha }}" >> $GITHUB_OUTPUT
+          fi
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 1
+          ref: ${{ steps.ref.outputs.ref }}
+          fetch-depth: 2 # Need at least 2 commits to analyze the latest
 
-      - name: Run Claude PR Action
+      - name: Determine analysis type
+        id: analysis
+        run: |
+          TYPE="docs-impact"
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            TYPE="${{ github.event.inputs.analysis_type }}"
+          elif [ "${{ github.event_name }}" = "issue_comment" ]; then
+            BODY="${{ github.event.comment.body }}"
+            if echo "$BODY" | grep -qi "/security-review"; then TYPE="security-review"; fi
+            if echo "$BODY" | grep -qi "/summarize-commit"; then TYPE="summarize-commit"; fi
+            if echo "$BODY" | grep -qi "/docs-impact"; then TYPE="docs-impact"; fi
+            if echo "$BODY" | grep -qi "/claude"; then TYPE="docs-impact"; fi
+          fi
+          echo "type=$TYPE" >> $GITHUB_OUTPUT
+
+      - name: Run Claude Analysis
         uses: anthropics/claude-code-action@beta
         with:
+          mode: agent
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
-          # Or use OAuth token instead:
-          # claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
-          timeout_minutes: "60"
-          # mode: tag  # Default: responds to @claude mentions
-          # Optional: Restrict network access to specific domains only
-          # experimental_allowed_domains: |
-          #   .anthropic.com
-          #   .github.com
-          #   api.github.com
-          #   .githubusercontent.com
-          #   bun.sh
-          #   registry.npmjs.org
-          #   .blob.core.windows.net
+          override_prompt: |
+            Analyze the latest commit in this repository.
+
+            ${{ ((steps.analysis.outputs.type || 'docs-impact') == 'summarize-commit') && 'Task: Provide a clear, concise summary of what changed in the latest commit. Include the commit message, files changed, and the purpose of the changes.' || '' }}
+
+            ${{ ((steps.analysis.outputs.type || 'docs-impact') == 'security-review') && 'Task: Review the latest commit for potential security vulnerabilities. Check for exposed secrets, insecure coding patterns, dependency vulnerabilities, or any other security concerns. Provide specific recommendations if issues are found.' || '' }}
+
+            ${{ ((steps.analysis.outputs.type || 'docs-impact') == 'docs-impact') && 'Task: Determine whether the latest commit requires updates to the docs in the docs-workflow-test repository. Specifically evaluate: (1) API endpoints in stt_service/routers/* (added/changed/removed paths, methods, path/query/body params, response schema, error codes), (2) Schemas in stt_service/schema/* (added/removed fields, type/default/enum changes), (3) Request/response semantics visible in stt_service/api.py and jobs/*, (4) Config/auth in stt_service/settings.py and core_utils/_constants.py (env vars, feature flags, rate limits), and (5) Deprecations/migrations.
+
+            Output:
+            - Docs changes required: Yes or No
+            - Tables summarizing changes for: endpoints, parameters, schemas, responses, env/config
+            - Proposed doc edits with exact text/code blocks to paste
+            - Breaking changes and migration steps
+            - Release notes blurb
+
+            At the end, emit a fenced JSON block named docs_impact_summary with keys: docs_changes_required (boolean), endpoints_changed (array), schemas_changed (array), env_changes (array), breaking_changes (array), notes (string). If no changes are needed, clearly state "No doc changes required".' || '' }}
